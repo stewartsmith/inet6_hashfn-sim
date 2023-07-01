@@ -1,0 +1,347 @@
+Iterations:        1
+Instructions:      73
+Total Cycles:      62
+Total uOps:        89
+
+Dispatch Width:    4
+uOps Per Cycle:    1.44
+IPC:               1.18
+Block RThroughput: 22.3
+
+
+Instruction Info:
+[1]: #uOps
+[2]: Latency
+[3]: RThroughput
+[4]: MayLoad
+[5]: MayStore
+[6]: HasSideEffects (U)
+
+[1]    [2]    [3]    [4]    [5]    [6]    Instructions:
+ 1      5     0.50    *                   movl	8(%r9), %r11d
+ 1      1     0.50                        leal	-559038725(%rdx), %eax
+ 1      1     0.33                        movq	%rcx, %r10
+ 1      5     0.50    *                   movl	(%r9), %ecx
+ 2      6     0.50    *                   xorl	4(%r9), %ecx
+ 1      1     0.33                        addl	%eax, %r11d
+ 1      1     0.33                        addl	%eax, %ecx
+ 2      6     0.50    *                   addl	12(%r9), %eax
+ 1      1     0.33                        movl	%r11d, %edx
+ 1      1     0.33                        xorl	%r11d, %eax
+ 2      2     1.00                        roll	$14, %edx
+ 1      1     0.33                        subl	%edx, %eax
+ 1      1     0.33                        movl	%eax, %edx
+ 1      1     0.33                        xorl	%eax, %ecx
+ 2      2     1.00                        roll	$11, %edx
+ 1      1     0.33                        subl	%edx, %ecx
+ 1      1     0.33                        xorl	%ecx, %r11d
+ 1      1     0.33                        movl	%ecx, %edx
+ 2      2     1.00                        rorl	$7, %edx
+ 1      1     0.33                        movl	%r11d, %r9d
+ 1      1     0.33                        subl	%edx, %r9d
+ 1      1     0.33                        movl	%r9d, %edx
+ 1      1     0.33                        xorl	%r9d, %eax
+ 2      2     1.00                        roll	$16, %edx
+ 1      1     0.33                        subl	%edx, %eax
+ 1      1     0.33                        movl	%eax, %edx
+ 1      1     0.33                        xorl	%eax, %ecx
+ 2      2     1.00                        roll	$4, %edx
+ 1      1     0.33                        subl	%edx, %ecx
+ 1      5     0.50    *                   movl	(%rdi), %edx
+ 1      5     0.50    *                   movzwl	8(%rsp), %edi
+ 1      1     0.33                        xorl	%ecx, %r9d
+ 2      2     1.00                        roll	$14, %ecx
+ 1      1     0.33                        subl	%ecx, %r9d
+ 1      1     0.50                        leal	-559038725(%rdx,%rsi), %esi
+ 1      1     0.33                        movl	%r8d, %edx
+ 1      5     0.50    *                   movl	12(%r10), %ecx
+ 1      1     0.33                        xorl	%r9d, %eax
+ 1      1     0.50                        shll	$16, %edx
+ 1      1     0.33                        addl	%esi, %eax
+ 2      2     1.00                        rorl	$8, %r9d
+ 1      1     0.33                        orl	%edi, %edx
+ 1      1     0.33                        addl	%esi, %ecx
+ 1      1     0.33                        subl	%r9d, %eax
+ 1      1     0.33                        addl	%esi, %edx
+ 1      1     0.33                        movl	%eax, %esi
+ 1      1     0.33                        xorl	%eax, %edx
+ 2      2     1.00                        roll	$14, %esi
+ 1      1     0.33                        subl	%esi, %edx
+ 1      1     0.33                        movl	%edx, %esi
+ 1      1     0.33                        xorl	%edx, %ecx
+ 2      2     1.00                        roll	$11, %esi
+ 1      1     0.33                        subl	%esi, %ecx
+ 1      1     0.33                        movl	%ecx, %esi
+ 1      1     0.33                        xorl	%ecx, %eax
+ 2      2     1.00                        rorl	$7, %esi
+ 1      1     0.33                        subl	%esi, %eax
+ 1      1     0.33                        movl	%eax, %esi
+ 1      1     0.33                        xorl	%eax, %edx
+ 2      2     1.00                        roll	$16, %esi
+ 1      1     0.33                        subl	%esi, %edx
+ 1      1     0.33                        movl	%edx, %esi
+ 1      1     0.33                        xorl	%edx, %ecx
+ 2      2     1.00                        roll	$4, %esi
+ 1      1     0.33                        subl	%esi, %ecx
+ 1      1     0.33                        xorl	%ecx, %eax
+ 2      2     1.00                        roll	$14, %ecx
+ 1      1     0.33                        subl	%ecx, %eax
+ 1      1     0.33                        xorl	%eax, %edx
+ 2      2     1.00                        rorl	$8, %eax
+ 1      1     0.33                        subl	%eax, %edx
+ 1      1     0.33                        movl	%edx, %eax
+ 1      1     1.00                  U     retq
+
+
+Resources:
+[0]   - SBDivider
+[1]   - SBFPDivider
+[2]   - SBPort0
+[3]   - SBPort1
+[4]   - SBPort4
+[5]   - SBPort5
+[6.0] - SBPort23
+[6.1] - SBPort23
+
+
+Resource pressure per iteration:
+[0]    [1]    [2]    [3]    [4]    [5]    [6.0]  [6.1]  
+ -      -     26.00  23.00   -     33.00  3.00   4.00   
+
+Resource pressure by instruction:
+[0]    [1]    [2]    [3]    [4]    [5]    [6.0]  [6.1]  Instructions:
+ -      -      -      -      -      -      -     1.00   movl	8(%r9), %r11d
+ -      -      -     1.00    -      -      -      -     leal	-559038725(%rdx), %eax
+ -      -      -      -      -     1.00    -      -     movq	%rcx, %r10
+ -      -      -      -      -      -     1.00    -     movl	(%r9), %ecx
+ -      -     1.00    -      -      -      -     1.00   xorl	4(%r9), %ecx
+ -      -      -     1.00    -      -      -      -     addl	%eax, %r11d
+ -      -      -      -      -     1.00    -      -     addl	%eax, %ecx
+ -      -      -      -      -     1.00   1.00    -     addl	12(%r9), %eax
+ -      -     1.00    -      -      -      -      -     movl	%r11d, %edx
+ -      -      -     1.00    -      -      -      -     xorl	%r11d, %eax
+ -      -     2.00    -      -      -      -      -     roll	$14, %edx
+ -      -      -      -      -     1.00    -      -     subl	%edx, %eax
+ -      -      -     1.00    -      -      -      -     movl	%eax, %edx
+ -      -     1.00    -      -      -      -      -     xorl	%eax, %ecx
+ -      -      -      -      -     2.00    -      -     roll	$11, %edx
+ -      -      -      -      -     1.00    -      -     subl	%edx, %ecx
+ -      -      -     1.00    -      -      -      -     xorl	%ecx, %r11d
+ -      -     1.00    -      -      -      -      -     movl	%ecx, %edx
+ -      -     2.00    -      -      -      -      -     rorl	$7, %edx
+ -      -      -     1.00    -      -      -      -     movl	%r11d, %r9d
+ -      -      -      -      -     1.00    -      -     subl	%edx, %r9d
+ -      -     1.00    -      -      -      -      -     movl	%r9d, %edx
+ -      -      -      -      -     1.00    -      -     xorl	%r9d, %eax
+ -      -      -      -      -     2.00    -      -     roll	$16, %edx
+ -      -      -     1.00    -      -      -      -     subl	%edx, %eax
+ -      -     1.00    -      -      -      -      -     movl	%eax, %edx
+ -      -      -     1.00    -      -      -      -     xorl	%eax, %ecx
+ -      -     2.00    -      -      -      -      -     roll	$4, %edx
+ -      -      -     1.00    -      -      -      -     subl	%edx, %ecx
+ -      -      -      -      -      -      -     1.00   movl	(%rdi), %edx
+ -      -      -      -      -      -     1.00    -     movzwl	8(%rsp), %edi
+ -      -     1.00    -      -      -      -      -     xorl	%ecx, %r9d
+ -      -      -      -      -     2.00    -      -     roll	$14, %ecx
+ -      -      -     1.00    -      -      -      -     subl	%ecx, %r9d
+ -      -      -     1.00    -      -      -      -     leal	-559038725(%rdx,%rsi), %esi
+ -      -      -     1.00    -      -      -      -     movl	%r8d, %edx
+ -      -      -      -      -      -      -     1.00   movl	12(%r10), %ecx
+ -      -     1.00    -      -      -      -      -     xorl	%r9d, %eax
+ -      -     1.00    -      -      -      -      -     shll	$16, %edx
+ -      -      -     1.00    -      -      -      -     addl	%esi, %eax
+ -      -      -      -      -     2.00    -      -     rorl	$8, %r9d
+ -      -      -      -      -     1.00    -      -     orl	%edi, %edx
+ -      -     1.00    -      -      -      -      -     addl	%esi, %ecx
+ -      -     1.00    -      -      -      -      -     subl	%r9d, %eax
+ -      -      -     1.00    -      -      -      -     addl	%esi, %edx
+ -      -      -      -      -     1.00    -      -     movl	%eax, %esi
+ -      -      -     1.00    -      -      -      -     xorl	%eax, %edx
+ -      -      -      -      -     2.00    -      -     roll	$14, %esi
+ -      -     1.00    -      -      -      -      -     subl	%esi, %edx
+ -      -      -     1.00    -      -      -      -     movl	%edx, %esi
+ -      -     1.00    -      -      -      -      -     xorl	%edx, %ecx
+ -      -      -      -      -     2.00    -      -     roll	$11, %esi
+ -      -      -     1.00    -      -      -      -     subl	%esi, %ecx
+ -      -     1.00    -      -      -      -      -     movl	%ecx, %esi
+ -      -      -      -      -     1.00    -      -     xorl	%ecx, %eax
+ -      -      -      -      -     2.00    -      -     rorl	$7, %esi
+ -      -      -     1.00    -      -      -      -     subl	%esi, %eax
+ -      -     1.00    -      -      -      -      -     movl	%eax, %esi
+ -      -      -     1.00    -      -      -      -     xorl	%eax, %edx
+ -      -      -      -      -     2.00    -      -     roll	$16, %esi
+ -      -     1.00    -      -      -      -      -     subl	%esi, %edx
+ -      -      -     1.00    -      -      -      -     movl	%edx, %esi
+ -      -     1.00    -      -      -      -      -     xorl	%edx, %ecx
+ -      -      -      -      -     2.00    -      -     roll	$4, %esi
+ -      -      -     1.00    -      -      -      -     subl	%esi, %ecx
+ -      -     1.00    -      -      -      -      -     xorl	%ecx, %eax
+ -      -      -      -      -     2.00    -      -     roll	$14, %ecx
+ -      -      -     1.00    -      -      -      -     subl	%ecx, %eax
+ -      -     1.00    -      -      -      -      -     xorl	%eax, %edx
+ -      -      -      -      -     2.00    -      -     rorl	$8, %eax
+ -      -      -     1.00    -      -      -      -     subl	%eax, %edx
+ -      -     1.00    -      -      -      -      -     movl	%edx, %eax
+ -      -      -      -      -     1.00    -      -     retq
+
+
+Timeline view:
+                    0123456789          0123456789          0123456789  
+Index     0123456789          0123456789          0123456789          01
+
+[0,0]     DeeeeeER  .    .    .    .    .    .    .    .    .    .    ..   movl	8(%r9), %r11d
+[0,1]     DeE----R  .    .    .    .    .    .    .    .    .    .    ..   leal	-559038725(%rdx), %eax
+[0,2]     DeE----R  .    .    .    .    .    .    .    .    .    .    ..   movq	%rcx, %r10
+[0,3]     DeeeeeER  .    .    .    .    .    .    .    .    .    .    ..   movl	(%r9), %ecx
+[0,4]     .DeeeeeeER.    .    .    .    .    .    .    .    .    .    ..   xorl	4(%r9), %ecx
+[0,5]     .D====eE-R.    .    .    .    .    .    .    .    .    .    ..   addl	%eax, %r11d
+[0,6]     .D======eER    .    .    .    .    .    .    .    .    .    ..   addl	%eax, %ecx
+[0,7]     . DeeeeeeER    .    .    .    .    .    .    .    .    .    ..   addl	12(%r9), %eax
+[0,8]     . D====eE-R    .    .    .    .    .    .    .    .    .    ..   movl	%r11d, %edx
+[0,9]     . D======eER   .    .    .    .    .    .    .    .    .    ..   xorl	%r11d, %eax
+[0,10]    .  D====eeER   .    .    .    .    .    .    .    .    .    ..   roll	$14, %edx
+[0,11]    .  D======eER  .    .    .    .    .    .    .    .    .    ..   subl	%edx, %eax
+[0,12]    .  D=======eER .    .    .    .    .    .    .    .    .    ..   movl	%eax, %edx
+[0,13]    .   D======eER .    .    .    .    .    .    .    .    .    ..   xorl	%eax, %ecx
+[0,14]    .   D=======eeER    .    .    .    .    .    .    .    .    ..   roll	$11, %edx
+[0,15]    .   D=========eER   .    .    .    .    .    .    .    .    ..   subl	%edx, %ecx
+[0,16]    .    D=========eER  .    .    .    .    .    .    .    .    ..   xorl	%ecx, %r11d
+[0,17]    .    D=========eER  .    .    .    .    .    .    .    .    ..   movl	%ecx, %edx
+[0,18]    .    D==========eeER.    .    .    .    .    .    .    .    ..   rorl	$7, %edx
+[0,19]    .    .D=========eE-R.    .    .    .    .    .    .    .    ..   movl	%r11d, %r9d
+[0,20]    .    .D===========eER    .    .    .    .    .    .    .    ..   subl	%edx, %r9d
+[0,21]    .    .D============eER   .    .    .    .    .    .    .    ..   movl	%r9d, %edx
+[0,22]    .    .D============eER   .    .    .    .    .    .    .    ..   xorl	%r9d, %eax
+[0,23]    .    . D============eeER .    .    .    .    .    .    .    ..   roll	$16, %edx
+[0,24]    .    . D==============eER.    .    .    .    .    .    .    ..   subl	%edx, %eax
+[0,25]    .    . D===============eER    .    .    .    .    .    .    ..   movl	%eax, %edx
+[0,26]    .    .  D==============eER    .    .    .    .    .    .    ..   xorl	%eax, %ecx
+[0,27]    .    .  D===============eeER  .    .    .    .    .    .    ..   roll	$4, %edx
+[0,28]    .    .  D=================eER .    .    .    .    .    .    ..   subl	%edx, %ecx
+[0,29]    .    .   DeeeeeE------------R .    .    .    .    .    .    ..   movl	(%rdi), %edx
+[0,30]    .    .   DeeeeeE------------R .    .    .    .    .    .    ..   movzwl	8(%rsp), %edi
+[0,31]    .    .   D=================eER.    .    .    .    .    .    ..   xorl	%ecx, %r9d
+[0,32]    .    .    D================eeER    .    .    .    .    .    ..   roll	$14, %ecx
+[0,33]    .    .    D==================eER   .    .    .    .    .    ..   subl	%ecx, %r9d
+[0,34]    .    .    D======eE------------R   .    .    .    .    .    ..   leal	-559038725(%rdx,%rsi), %esi
+[0,35]    .    .    .DeE-----------------R   .    .    .    .    .    ..   movl	%r8d, %edx
+[0,36]    .    .    .DeeeeeE-------------R   .    .    .    .    .    ..   movl	12(%r10), %ecx
+[0,37]    .    .    .D==================eER  .    .    .    .    .    ..   xorl	%r9d, %eax
+[0,38]    .    .    .D=eE-----------------R  .    .    .    .    .    ..   shll	$16, %edx
+[0,39]    .    .    . D==================eER .    .    .    .    .    ..   addl	%esi, %eax
+[0,40]    .    .    . D=================eeER .    .    .    .    .    ..   rorl	$8, %r9d
+[0,41]    .    .    . D==eE----------------R .    .    .    .    .    ..   orl	%edi, %edx
+[0,42]    .    .    .  D====eE-------------R .    .    .    .    .    ..   addl	%esi, %ecx
+[0,43]    .    .    .  D==================eER.    .    .    .    .    ..   subl	%r9d, %eax
+[0,44]    .    .    .  D====eE--------------R.    .    .    .    .    ..   addl	%esi, %edx
+[0,45]    .    .    .  D===================eER    .    .    .    .    ..   movl	%eax, %esi
+[0,46]    .    .    .   D==================eER    .    .    .    .    ..   xorl	%eax, %edx
+[0,47]    .    .    .   D===================eeER  .    .    .    .    ..   roll	$14, %esi
+[0,48]    .    .    .   D=====================eER .    .    .    .    ..   subl	%esi, %edx
+[0,49]    .    .    .    D=====================eER.    .    .    .    ..   movl	%edx, %esi
+[0,50]    .    .    .    D=====================eER.    .    .    .    ..   xorl	%edx, %ecx
+[0,51]    .    .    .    D======================eeER   .    .    .    ..   roll	$11, %esi
+[0,52]    .    .    .    .D=======================eER  .    .    .    ..   subl	%esi, %ecx
+[0,53]    .    .    .    .D========================eER .    .    .    ..   movl	%ecx, %esi
+[0,54]    .    .    .    .D========================eER .    .    .    ..   xorl	%ecx, %eax
+[0,55]    .    .    .    . D========================eeER    .    .    ..   rorl	$7, %esi
+[0,56]    .    .    .    . D==========================eER   .    .    ..   subl	%esi, %eax
+[0,57]    .    .    .    . D===========================eER  .    .    ..   movl	%eax, %esi
+[0,58]    .    .    .    .  D==========================eER  .    .    ..   xorl	%eax, %edx
+[0,59]    .    .    .    .  D===========================eeER.    .    ..   roll	$16, %esi
+[0,60]    .    .    .    .  D=============================eER    .    ..   subl	%esi, %edx
+[0,61]    .    .    .    .   D=============================eER   .    ..   movl	%edx, %esi
+[0,62]    .    .    .    .   D=============================eER   .    ..   xorl	%edx, %ecx
+[0,63]    .    .    .    .   D==============================eeER .    ..   roll	$4, %esi
+[0,64]    .    .    .    .    D===============================eER.    ..   subl	%esi, %ecx
+[0,65]    .    .    .    .    D================================eER    ..   xorl	%ecx, %eax
+[0,66]    .    .    .    .    D================================eeER   ..   roll	$14, %ecx
+[0,67]    .    .    .    .    .D=================================eER  ..   subl	%ecx, %eax
+[0,68]    .    .    .    .    .D==================================eER ..   xorl	%eax, %edx
+[0,69]    .    .    .    .    .D==================================eeER..   rorl	$8, %eax
+[0,70]    .    .    .    .    . D===================================eER.   subl	%eax, %edx
+[0,71]    .    .    .    .    . D====================================eER   movl	%edx, %eax
+[0,72]    .    .    .    .    . DeE------------------------------------R   retq
+
+
+Average Wait times (based on the timeline view):
+[0]: Executions
+[1]: Average time spent waiting in a scheduler's queue
+[2]: Average time spent waiting in a scheduler's queue while ready
+[3]: Average time elapsed from WB until retire stage
+
+      [0]    [1]    [2]    [3]
+0.     1     1.0    1.0    0.0       movl	8(%r9), %r11d
+1.     1     1.0    1.0    4.0       leal	-559038725(%rdx), %eax
+2.     1     1.0    1.0    4.0       movq	%rcx, %r10
+3.     1     1.0    1.0    0.0       movl	(%r9), %ecx
+4.     1     1.0    1.0    0.0       xorl	4(%r9), %ecx
+5.     1     5.0    0.0    1.0       addl	%eax, %r11d
+6.     1     7.0    0.0    0.0       addl	%eax, %ecx
+7.     1     1.0    1.0    0.0       addl	12(%r9), %eax
+8.     1     5.0    0.0    1.0       movl	%r11d, %edx
+9.     1     7.0    0.0    0.0       xorl	%r11d, %eax
+10.    1     5.0    0.0    0.0       roll	$14, %edx
+11.    1     7.0    0.0    0.0       subl	%edx, %eax
+12.    1     8.0    0.0    0.0       movl	%eax, %edx
+13.    1     7.0    0.0    0.0       xorl	%eax, %ecx
+14.    1     8.0    0.0    0.0       roll	$11, %edx
+15.    1     10.0   0.0    0.0       subl	%edx, %ecx
+16.    1     10.0   0.0    0.0       xorl	%ecx, %r11d
+17.    1     10.0   0.0    0.0       movl	%ecx, %edx
+18.    1     11.0   0.0    0.0       rorl	$7, %edx
+19.    1     10.0   0.0    1.0       movl	%r11d, %r9d
+20.    1     12.0   0.0    0.0       subl	%edx, %r9d
+21.    1     13.0   0.0    0.0       movl	%r9d, %edx
+22.    1     13.0   0.0    0.0       xorl	%r9d, %eax
+23.    1     13.0   0.0    0.0       roll	$16, %edx
+24.    1     15.0   0.0    0.0       subl	%edx, %eax
+25.    1     16.0   0.0    0.0       movl	%eax, %edx
+26.    1     15.0   0.0    0.0       xorl	%eax, %ecx
+27.    1     16.0   0.0    0.0       roll	$4, %edx
+28.    1     18.0   0.0    0.0       subl	%edx, %ecx
+29.    1     1.0    1.0    12.0      movl	(%rdi), %edx
+30.    1     1.0    1.0    12.0      movzwl	8(%rsp), %edi
+31.    1     18.0   0.0    0.0       xorl	%ecx, %r9d
+32.    1     17.0   0.0    0.0       roll	$14, %ecx
+33.    1     19.0   0.0    0.0       subl	%ecx, %r9d
+34.    1     7.0    2.0    12.0      leal	-559038725(%rdx,%rsi), %esi
+35.    1     1.0    1.0    17.0      movl	%r8d, %edx
+36.    1     1.0    1.0    13.0      movl	12(%r10), %ecx
+37.    1     19.0   0.0    0.0       xorl	%r9d, %eax
+38.    1     2.0    0.0    17.0      shll	$16, %edx
+39.    1     19.0   0.0    0.0       addl	%esi, %eax
+40.    1     18.0   0.0    0.0       rorl	$8, %r9d
+41.    1     3.0    0.0    16.0      orl	%edi, %edx
+42.    1     5.0    0.0    13.0      addl	%esi, %ecx
+43.    1     19.0   0.0    0.0       subl	%r9d, %eax
+44.    1     5.0    0.0    14.0      addl	%esi, %edx
+45.    1     20.0   0.0    0.0       movl	%eax, %esi
+46.    1     19.0   0.0    0.0       xorl	%eax, %edx
+47.    1     20.0   0.0    0.0       roll	$14, %esi
+48.    1     22.0   0.0    0.0       subl	%esi, %edx
+49.    1     22.0   0.0    0.0       movl	%edx, %esi
+50.    1     22.0   0.0    0.0       xorl	%edx, %ecx
+51.    1     23.0   0.0    0.0       roll	$11, %esi
+52.    1     24.0   0.0    0.0       subl	%esi, %ecx
+53.    1     25.0   0.0    0.0       movl	%ecx, %esi
+54.    1     25.0   0.0    0.0       xorl	%ecx, %eax
+55.    1     25.0   0.0    0.0       rorl	$7, %esi
+56.    1     27.0   0.0    0.0       subl	%esi, %eax
+57.    1     28.0   0.0    0.0       movl	%eax, %esi
+58.    1     27.0   0.0    0.0       xorl	%eax, %edx
+59.    1     28.0   0.0    0.0       roll	$16, %esi
+60.    1     30.0   0.0    0.0       subl	%esi, %edx
+61.    1     30.0   0.0    0.0       movl	%edx, %esi
+62.    1     30.0   0.0    0.0       xorl	%edx, %ecx
+63.    1     31.0   0.0    0.0       roll	$4, %esi
+64.    1     32.0   0.0    0.0       subl	%esi, %ecx
+65.    1     33.0   0.0    0.0       xorl	%ecx, %eax
+66.    1     33.0   0.0    0.0       roll	$14, %ecx
+67.    1     34.0   0.0    0.0       subl	%ecx, %eax
+68.    1     35.0   0.0    0.0       xorl	%eax, %edx
+69.    1     35.0   0.0    0.0       rorl	$8, %eax
+70.    1     36.0   0.0    0.0       subl	%eax, %edx
+71.    1     37.0   0.0    0.0       movl	%edx, %eax
+72.    1     1.0    1.0    36.0      retq
+       1     15.8   0.2    2.4       <total>

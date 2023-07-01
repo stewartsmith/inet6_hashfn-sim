@@ -11,4 +11,5 @@ r () {
 for f in net6hash-hsiphash.c net6hash-jhash-faddr.c net6hash-jhash-initial-proposal.c net6hash-orig.c; do
 	r bash -x -c "gcc -march=x86-64-v2 -O2 -c /mnt/$f -S -o /mnt/$f-x86-64v2.s"
 	r bash -x -c "cat /mnt/$f-x86-64v2.s | llvm-mca --march x86-64 --mcpu=skylake --timeline --timeline-max-cycles=1000 --iterations=1 > /mnt/$f-skylake.txt"
+	r bash -x -c "cat /mnt/$f-x86-64v2.s | llvm-mca --march x86-64 --mcpu=nehalem --timeline --timeline-max-cycles=1000 --iterations=1 > /mnt/$f-nehalem.txt"
 done
